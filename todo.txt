@@ -1,0 +1,3 @@
+use the url parser to get manage the sidenav items, centralizedly
+
+before, feedback and join us form should be created.

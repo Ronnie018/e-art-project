@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@font-face {
+  font-family: 'Luxia Display';
+  src: url('../public/fonts/Luxia-Display.otf') format('otf');
+}
+
+:root {
+  --header-height: 4rem;
+}
+
+* {
+  // font-family: 'Luxia Display', serif;
+  font-family: 'Spectral SC', serif;
+}
+
+.layer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000d0;
+  z-index: -99;
+}
+
+.layer {
+  background-size: 100%;
+  background-position-y: 0;
+  position: fixed;
+  @media (max-width: 768px) {
+    background-size: cover;
+  }
+}
+
+.layer--light::after {
+  background-color: #0d0d0d;
+  opacity: 84%;
+}
+
+.c-screen {
+  min-height: calc(100vh - var(--header-height));
+}
+
+.out {
+  outline: 1px solid purple;
+}
+
+.core {
+  display: flex;
+  flex-wrap: wrap;
+}
+.core > :first-child {
+  flex: 1 0 auto;
+}
+.core > :last-child {
+  flex: 6 1 560px;
+}
+
+@media (max-width: 768px) {
+  .disable {
+    display: none;
+  }
+}
+
+.page-header {
+  @apply w-max text-3xl font-light;
+
+  position: relative;
+  &::after {
+    content: '';
+    width: max(calc(100% + 30px), 150px);
+    position: absolute;
+    height: 1px;
+    background-color: #8f78a1;
+  }
+}
+.section-header {
+  @apply w-max text-xl font-light;
+
+  position: relative;
+  &::after {
+    content: '';
+    width: max(calc(100% + 30px), 150px);
+    position: absolute;
+    height: 3px;
+    background-color: #8f78a1;
+  }
+}
+
+.d-shadow {
+  box-shadow: 9px 12px 6px -2px rgba(0, 0, 0, 0.25);
+}
+
+.not-draggable {
+  outline: 1px solid red;
+  position: relative;
+  &::before {
+    content: '';
+    background-color: #1278c0ac;
+    height: 100%;
+    width: calc(100% + 1rem);
+    position: absolute;
+    z-index: 10;
+  }
+}
