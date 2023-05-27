@@ -40,3 +40,19 @@ export function changeSelected(state, url) {
     return { ...item, active: false };
   });
 }
+
+export function getListItems(url) {
+  return url.startsWith('/about-us')
+    ? [
+        { name: 'About Us', link: '/about-us', active: false },
+        { name: 'Founder', link: '/about-us/founder', active: false },
+        { name: 'Mission', link: '/about-us/mission', active: false },
+        { name: 'Vision', link: '/about-us/vision', active: false },
+      ]
+    : [
+        { name: 'Welcome To E-ART', link: '/', active: false },
+        { name: 'Artists', link: '/artists', active: false },
+        { name: 'feedbacks', link: '/feedbacks', active: false },
+        { name: 'Join Us', link: '/join-us', active: false },
+      ];
+}

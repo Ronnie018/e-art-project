@@ -2,7 +2,7 @@ import Link from './components/Link';
 
 export default function Home() {
   return (
-    <div className=''>
+    <div>
       <div className='min-h-c-screen flex justify-center text-white top-0 left-0 right-0 bottom-0 m-auto absolute'>
         <div className='h-max pt-24'>
           <div className='flex flex-col items-center justify-center gap-6'>

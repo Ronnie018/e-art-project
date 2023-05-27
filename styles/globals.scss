@@ -81,6 +81,19 @@
     background-color: #8f78a1;
   }
 }
+
+.page-header-secondary {
+  @apply w-max text-2xl font-semibold text-white;
+
+  position: relative;
+  &::after {
+    content: '';
+    width: 70%;
+    position: absolute;
+    height: 1px;
+    background-color: #b2a8bb;
+  }
+}
 .section-header {
   @apply w-max text-xl font-light;
 

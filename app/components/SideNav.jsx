@@ -6,10 +6,10 @@ import { App } from '../contexts/app';
 import ElipsisList from './Elipsis';
 
 export default function SideNav() {
-  const { navlist, setNavlist } = useContext(App);
+  const { navlist } = useContext(App);
 
   return (
-    <div className='hidden sm:flex justify-center sm:justify-start items-center'>
+    <div className='hidden sm:flex justify-center sm:justify-start items-center my-8'>
       <ul>
         {navlist &&
           navlist.map(({ name, link, active }) => {
